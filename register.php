@@ -47,7 +47,6 @@ else $MessageError = -1;
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");
-    $smarty->assign("MENU_3","Login");
     $smarty->display('register_template.tpl');
 
 
