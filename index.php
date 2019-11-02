@@ -24,9 +24,7 @@ for($i=0; $i<$nrows; $i++)
 
 $smarty->assign('baseLab4',$tuple);
 $smarty->display('templates/index_template.tpl');
- $smarty->assign("MENU_1","Home");
- $smarty->assign("MENU_2","Register");
- $smarty->assign("MENU_3","Login");
+
 
 mysql_close();
 ?>
