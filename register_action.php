@@ -32,7 +32,7 @@ include 'db.php';
         header("Location: register.php?Error=1&username=$username");
     }
 
-    if ($password!=$password_corfirmed) {
+    elseif ($password!=$password_corfirmed) {
       header("Location: register.php?Error=4&username=$username&email=$email");
     }
 
