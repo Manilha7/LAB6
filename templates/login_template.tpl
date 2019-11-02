@@ -49,7 +49,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="register.php">{$MENU_2}</a></li>
-                <li><a href="#">{$MENU_3}</a></li>
+                <li><a href="#login.php">{$MENU_3}</a></li>
             </ul>
         </div>
     </div>
