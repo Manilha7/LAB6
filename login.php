@@ -36,6 +36,7 @@ $email = $_GET["email"];
         session_destroy();
     }
 
+    
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");

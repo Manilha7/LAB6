@@ -31,7 +31,10 @@ include 'db.php';
         header("Location: index.php");
     }
     else {
-        
+        $_SESSION["id"] = $dbdata['id'];
+        $_SESSION["name"] = $dbdata['name'];
+         $_SESSION["error"] = 0;
+        header("Location: index.php");
     }
     
     }

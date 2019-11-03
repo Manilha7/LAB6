@@ -21,7 +21,7 @@ include 'db.php';
         die("Erro " . mysql_errno() . " : " . mysql_error());
     
     $nrows  = mysql_num_rows($result);
-    if ( empty($password) && empty($password_corfirmed) && empty($username) && empty($email)) {
+    if ( empty($password) || empty($password_corfirmed) || empty($username) || empty($email)) {
        header("Location: register.php?Error=0");
     }
 
@@ -33,7 +33,7 @@ include 'db.php';
       header("Location: register.php?Error=4&username=$username&email=$email");
     }
 
-    elseif (empty($password) || empty($password_corfirmed)) {
+    elseif (empty($password) && empty($password_corfirmed)) {
       header("Location: register.php?Error=3&email=$email&username=$username"); 
     }
 
