@@ -13,7 +13,8 @@ include 'db.php';
 
     if ($db) {
     $email = $_POST["email"];
-    $password = $_POST["password"];
+    $pwd = $_POST["password"];
+    $password = substr(md5($_POST['password']),0,32);
     $error = 0;
     
           
@@ -38,6 +39,8 @@ include 'db.php';
         $_SESSION["error"] = 4;
         header("Location: login.php");
     }
+
+
     //Sucesso
     else if($dbdata['email']==$email && $dbdata['password_digest']==$password){
         $_SESSION["id"] = $dbdata['id'];
