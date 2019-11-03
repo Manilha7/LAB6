@@ -27,7 +27,7 @@ function errorMessage($Error){
     	return "Email tem formato incorrecto";
     }
     elseif ($Error==3) {
-    	return "Passwords em branco";
+    	return "Password em branco";
     }
     elseif ($Error==4) {
     	 return "Passwords não coincidem";
