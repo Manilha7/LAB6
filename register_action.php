@@ -33,7 +33,7 @@ include 'db.php';
       header("Location: register.php?Error=4&username=$username&email=$email");
     }
 
-    if (empty($password) && empty($password_corfirmed)) {
+    if (empty($password) && empty($password_corfirmed) && empty($username)!=true && empty($email)!=true) {
       header("Location: register.php?Error=3&email=$email&username=$username"); 
     }
 
