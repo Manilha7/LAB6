@@ -54,7 +54,7 @@
         </div>
     </div>
 </nav>
-<form>
+<form method="POST" action="login_action.php">
 <div class="container text-center">
     <div class="row content">
         <div class="col-sm-2 sidenav">
