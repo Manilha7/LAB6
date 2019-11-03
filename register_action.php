@@ -4,9 +4,6 @@
 
 include 'db.php';
 
-
-
-
     // Process signup submission
     $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 

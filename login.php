@@ -16,28 +16,28 @@ $name = $_SESSION["name"];
 $email = $_GET["email"];
 
     if($error==4){
-        $MessageError='Preencha todos os campos';
-        $smarty->assign('MessageError', $MessageError);
+        $Erro='Preencha todos os campos';
+        $smarty->assign('MESSAGE', $Erro);
         session_destroy();
     }
     //Sucesso
     else if($error==2){
-        $MessageError='Sucesso';
-        $smarty->display('register_sucess.html');
-        $smarty->assign('MessageError', $MessageError);
+        $Erro='Sucesso';
+        $smarty->loadTemplatefile('message_template.html', true, true);
+        $smarty->assign('MESSAGE', $Erro);
         $smarty->parseCurrentBlock();
     }
     //Password Errada
     else if($error==1){
-        $MessageError='Password Incorreta';
-        $smarty->assign('MessageError', $MessageError);
-        $smarty->setVariable('email', $email);
+        $Erro='Password Incorreta';
+        $smarty->assign('MESSAGE', $Erro);
+        $smarty->assign('EMAIL', $email);
         session_destroy();
     }
     //Nao existe
     else if($error==3){
-        $MessageError='Utilizador nao Existe';
-        $smarty->assign('MessageError', $MessageError);
+        $Erro='Utilizador nao Existe';
+        $smarty->assign('MESSAGE', $Erro);
         session_destroy();
     }
 
