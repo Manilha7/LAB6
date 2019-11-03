@@ -15,15 +15,10 @@ $error = $_SESSION["error"];
 $name = $_SESSION["name"];
 $email = $_GET["email"];
 
-    if($error==4){
-        $Erro='Preencha todos os campos';
-        $smarty->assign('MESSAGE', $Erro);
-        session_destroy();
-    }
     //Sucesso
     else if($error==2){
         $Erro='Sucesso';
-        $smarty->loadTemplatefile('message_template.html', true, true);
+        $smarty->display('message_template.html');
         $smarty->assign('MESSAGE', $Erro);
         $smarty->parseCurrentBlock();
     }

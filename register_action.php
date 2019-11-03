@@ -21,7 +21,7 @@ include 'db.php';
         die("Erro " . mysql_errno() . " : " . mysql_error());
     
     $nrows  = mysql_num_rows($result);
-    if ( empty($password) || empty($password_corfirmed) || empty($username) || empty($email)) {
+    if ( empty($password) && empty($password_corfirmed) && empty($username) && empty($email)) {
        header("Location: register.php?Error=0");
     }
 
