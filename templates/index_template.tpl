@@ -49,6 +49,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{$href2}">{$MENU_2}</a></li>
+                {if isset($MENU_4)}
+                <li><a href="{$href4}">{$MENU_4}</a></li>{/if}
                 <li><a href="{$href3}">{$MENU_3}</a></li>
             </ul>
         </div>
