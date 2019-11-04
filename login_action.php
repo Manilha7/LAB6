@@ -14,7 +14,7 @@ include 'db.php';
     $password = substr(md5($_POST['password']),0,32);
     $error = -1;
     
-          
+    print_r($_REQUEST."<br>"); 
     $sql = "SELECT * FROM users WHERE email='$email' AND password_digest='$password'";
    
 
@@ -26,11 +26,11 @@ include 'db.php';
         $_SESSION["id"] = $dbdata['id'];
         $_SESSION["name"] = $dbdata['name'];
         $_SESSION["error"] = 0;
-        header("Location: index.php");
+        //header("Location: index.php");
     }
     else{
         $_SESSION["error"] = -1;
-        header("Location: login.php?error=$error");
+       //s header("Location: login.php?error=$error");
         }
 
     }
