@@ -16,7 +16,7 @@
 <div class="container">
   <div class="card">
   <div class="card bg-success text-white  text-center">
-    <div class="card-body">See you back soon!</div>
+    <div class="card-body">{$Message}</div>
   </div>
   </div>
 </div>

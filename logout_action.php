@@ -4,5 +4,6 @@ include 'db.php';
 session_start();
 session_unset();
 session_destroy();
- header("Location: message_template.tpl");
+$Message= "See you back soon!";
+ header("Location: message_template.tpl&Message=$Message");
 ?>
