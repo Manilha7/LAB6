@@ -55,7 +55,7 @@
         </div>
     </div>
 </nav>
-
+{/if}
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
