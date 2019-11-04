@@ -24,13 +24,23 @@ for($i=0; $i<$nrows; $i++)
 
 $smarty->assign('baseLab4',$tuple);
 $smarty->assign("MENU_1","Home");
+
 $smarty->assign("MENU_2","Register");
 $smarty->assign("MENU_3","Login");
 $smarty->assign("href1","index.php");
 $smarty->assign("href2","register.php");
 $smarty->assign("href3","login.php");
+
+
+if ($Message eq 0) {
+	$smarty->assign("MENU_2","Welcome".$nome);
+	$smarty->assign("MENU_3","Logout");
+	$smarty->assign("href2","");
+	$smarty->assign("href3","logout_action.php");
+
+}
+
+
 $smarty->display('index_template.tpl');
-
-
 mysql_close();
 ?>
