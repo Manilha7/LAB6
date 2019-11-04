@@ -21,7 +21,7 @@ include 'db.php';
     $result = mysql_query($sql,$db);
     $dbexist = mysql_num_rows($result);
     $dbdata = mysql_fetch_array($result,MYSQL_ASSOC);
-    
+    print_r($sql);
     if ($dbexist > 0) {
         $_SESSION["id"] = $dbdata['id'];
         $_SESSION["name"] = $dbdata['name'];
