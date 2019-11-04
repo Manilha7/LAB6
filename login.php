@@ -16,30 +16,28 @@ $name = $_SESSION["name"];
 $email = $_GET["email"];
 
     //Sucesso
-    else if($error==2){
+    if($error==-1){
         $Erro='Sucesso';
         $smarty->display('message_template.html');
         $smarty->assign('MESSAGE', $Erro);
         $smarty->parseCurrentBlock();
     }
-    //Password Errada
+    //Insucesso
     else if($error==1){
         $Erro='Password Incorreta';
         $smarty->assign('MESSAGE', $Erro);
         $smarty->assign('EMAIL', $email);
         session_destroy();
     }
-    //Nao existe
-    else if($error==3){
-        $Erro='Utilizador nao Existe';
-        $smarty->assign('MESSAGE', $Erro);
-        session_destroy();
-    }
+    
 
     
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
     $smarty->assign("MENU_3","Login");
+    $smarty->assign("href1","index.php");
+    $smarty->assign("href2","register.php");
+    $smarty->assign("href3","login.php");
     $smarty->display('login_template.tpl');
 
 

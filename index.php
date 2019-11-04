@@ -23,10 +23,10 @@ for($i=0; $i<$nrows; $i++)
     $tuple[$i] = mysql_fetch_array($result,MYSQL_ASSOC);
 
 $smarty->assign('baseLab4',$tuple);
- $smarty->assign("MENU_1","Home");
- $smarty->assign("MENU_2","Register");
- $smarty->assign("MENU_3","Login");
-$smarty->display('templates/index_template.tpl');
+$smarty->assign("MENU_1","Home");
+$smarty->assign("MENU_2","Register");
+$smarty->assign("MENU_3","Login");
+$smarty->display('index_template.tpl');
 
 
 mysql_close();
