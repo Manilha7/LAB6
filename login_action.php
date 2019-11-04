@@ -30,7 +30,7 @@ include 'db.php';
     }
     else{
         $_SESSION["error"] = -1;
-        header("Location: login.php?email=$email");
+        header("Location: login.php?error=$error&email=$email");
         }
 
     }
