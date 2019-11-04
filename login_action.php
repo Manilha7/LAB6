@@ -15,7 +15,7 @@ include 'db.php';
     $error = -1;
     
           
-    $sql = "SELECT * FROM users WHERE email='$email' AND password_digest='$password'";
+     $sql = "SELECT name, email, password_digest, id FROM users WHERE email='$email' AND password_digest='$password'";
     $sql_email = "SELECT email FROM users WHERE email='$email'";
     $sql_pass = "SELECT password_digest FROM users WHERE email='$email'";
    
