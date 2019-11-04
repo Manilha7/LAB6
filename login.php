@@ -22,11 +22,13 @@ $smarty->compile_dir = 'templates_c';
     $error = $_SESSION["error"];
     $name = $_SESSION["name"];
     $email = $_GET["email"];
-
+  
 
     //Sucesso
     if($error==0){
         $Erro='Sucesso';
+        $smarty->assign("MENU_2","Logout");
+        $smarty->assign("MENU_3","Welcome "$name);
         $smarty->assign('MESSAGE', $Erro);
     }
     if($error==-1){
@@ -34,7 +36,11 @@ $smarty->compile_dir = 'templates_c';
         $smarty->assign('MESSAGE', $Erro);
         $smarty->assign('email', $email);
         session_destroy();
-    }    
+    }
+
+    if () {
+            # code...
+        }    
      
 
     $smarty->parseCurrentBlock();
