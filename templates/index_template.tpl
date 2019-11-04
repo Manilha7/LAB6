@@ -117,7 +117,7 @@
             <div class="text-right">
                 <h4><small><i> Data de criação:  {$base.created_at}</i></small></h4>
          </div>
-         <button style="float: bottom" type="submit" class="btn btn-warning">GO</button>
+         <button style="float: bottom" type="submit" class="btn btn-warning">Update</button>
    	</div>
 </div>
 
