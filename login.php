@@ -18,7 +18,7 @@ $smarty->compile_dir = 'templates_c';
     $smarty->assign("href2","register.php");
     $smarty->assign("href3","login.php");
   
-    print_r($_SESSION);
+    
     //Sucesso
     if($error==0){
         $Erro= 0;
@@ -31,7 +31,7 @@ $smarty->compile_dir = 'templates_c';
     }
 
 
-        //$smarty->display('login_template.tpl');
+        $smarty->display('login_template.tpl');
 
     
 ?>
