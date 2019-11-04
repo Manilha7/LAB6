@@ -27,8 +27,6 @@ $smarty->compile_dir = 'templates_c';
     //Sucesso
     if($error==0){
         $Erro='Sucesso';
-        $smarty->assign("MENU_2","Welcome ".$name);
-        $smarty->assign("MENU_3","Logout");
         $smarty->assign('MESSAGE', $Erro);
     }
     elseif($error==-1){
@@ -37,6 +35,7 @@ $smarty->compile_dir = 'templates_c';
         $smarty->assign('email', $email);
         session_destroy();
     }
+
 
     $smarty->parseCurrentBlock();
     

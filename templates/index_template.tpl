@@ -36,7 +36,6 @@
     </style>
 </head>
 <body>
- {if $MESSAGE eq "Sucesso" || $MESSAGE eq NULL }   
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -55,7 +54,6 @@
         </div>
     </div>
 </nav>
-{/if}
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
