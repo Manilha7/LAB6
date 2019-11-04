@@ -55,7 +55,7 @@
     </div>
 </nav>
  <!--BEGIN MESSAGE -->
-    <h6 style="text-align:center">{MESSAGE}</h6>
+    <h6 style="text-align:center">{$MESSAGE}</h6>
         <br />
         <br />
 <form method="POST" action="login_action.php">
