@@ -9,10 +9,7 @@ $smarty = new Smarty();
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
 
-
-$query  = "SELECT * FROM users INNER JOIN users ON microposts.user_id=users.id ORDER BY microposts.updated_at DESC";
-    $db = dbconnect($hostname, $db_name, $db_user, $db_passwd); 
-if($db) {
+ 
     
     $smarty->assign("MENU_1","Home");
     $smarty->assign("MENU_2","Register");
@@ -39,8 +36,5 @@ if($db) {
         session_destroy();
     }    
 
-    // fechar a ligação à base de dados
-    mysql_close($db);
-}
-
+    
 ?>
