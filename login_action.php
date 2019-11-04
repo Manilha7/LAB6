@@ -14,24 +14,24 @@ include 'db.php';
     $password = substr(md5($_POST['password']),0,32);
     $error = -1;
     
-    print_r($_REQUEST."<br>"); 
+    //print_r($_REQUEST."<br>"); 
     $sql = "SELECT * FROM users WHERE email='$email' AND password_digest='$password'";
    
 
     $result = mysql_query($sql,$db);
     $dbexist = mysql_num_rows($result);
     $dbdata = mysql_fetch_array($result,MYSQL_ASSOC);
-    print_r($sql);
+    //print_r($sql);
     if ($dbexist > 0) {
         $_SESSION["id"] = $dbdata['id'];
         $_SESSION["name"] = $dbdata['name'];
         $_SESSION["error"] = 0;
-        //header("Location: index.php");
+        header("Location: index.php");
     }
     else{
         $_SESSION["error"] = -1;
-       //s header("Location: login.php?error=$error");
-        }
+        header("Location: login.php?error=$error");
+    }
 
     }
 
