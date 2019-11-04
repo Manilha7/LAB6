@@ -25,16 +25,19 @@ include 'db.php';
     $error = -1;
     
           
-    $sql = "SELECT * FROM users WHERE email='$email' AND password_digest='$password'";
-
+    $sql = "SELECT * FROM users WHERE email='$email'";
+    $sql1 = "SELECT * FROM users WHERE password_digest='$password'";
 
     $result=mysql_query($sql,$db);
     $dbdata = mysql_fetch_array($result);
 
-    $nrows  = mysql_num_rows($result);
-    if ($nrows>0) {
-        $_SESSION["error"] = -1;
+    $result1=mysql_query($sql,$db);
+    $dbdata1 = mysql_fetch_array($result1);
 
+    $nrows  = mysql_num_rows($result);
+    $nrows1  = mysql_num_rows($result1);
+    if ($nrows==0 || $nrows1==0) {
+        $_SESSION["error"] = -1;
         header("Location: login_template.tpl");
     }
     else {
