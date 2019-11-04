@@ -72,7 +72,7 @@
 
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                    <input id="password-confirmed" type="password" class="form-control" name="password" placeholder="Password Confirmation" required>
+                    <input id="password-confirmed" type="password" class="form-control" name="password" placeholder="Password" required>
                 </div>
             <br>
             <hr>
