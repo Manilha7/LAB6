@@ -27,11 +27,11 @@ $smarty->compile_dir = 'templates_c';
     //Sucesso
     if($error==0){
         $Erro='Sucesso';
-        $smarty->assign("MENU_2","Logout");
-        $smarty->assign("MENU_3","Welcome "$name);
+        $smarty->assign("MENU_2","Welcome ".$name);
+        $smarty->assign("MENU_3","Logout");
         $smarty->assign('MESSAGE', $Erro);
     }
-    if($error==-1){
+    elseif($error==-1){
         $Erro='Username Incorreto ou Password Incorreta';
         $smarty->assign('MESSAGE', $Erro);
         $smarty->assign('email', $email);
