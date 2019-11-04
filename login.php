@@ -23,7 +23,7 @@ $smarty->compile_dir = 'templates_c';
     $name = $_SESSION["name"];
     $email = $_GET["email"];
   
-
+    print_r($_SESSION);
     //Sucesso
     if($error==0){
         $Erro= 0;
@@ -37,7 +37,7 @@ $smarty->compile_dir = 'templates_c';
     }
 
 
-        $smarty->display('login_template.tpl');
+        //$smarty->display('login_template.tpl');
 
     
 ?>
