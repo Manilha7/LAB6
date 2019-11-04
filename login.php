@@ -38,11 +38,6 @@ $smarty->compile_dir = 'templates_c';
         session_destroy();
     }
 
-    if () {
-            # code...
-        }    
-     
-
     $smarty->parseCurrentBlock();
     
 ?>
