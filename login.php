@@ -18,7 +18,9 @@ $smarty->compile_dir = 'templates_c';
     $smarty->assign("href2","register.php");
     $smarty->assign("href3","login.php");
   
-    
+    if(isset($_SESSION['error']))
+        $error=$_SESSION['error'];
+    else $error =0;
     //Sucesso
     if($error==0){
         $Erro= 0;
