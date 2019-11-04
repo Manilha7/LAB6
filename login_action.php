@@ -42,7 +42,7 @@ include 'db.php';
         header("Location: index.php");
     }
     // insucesso
-     else if(($dbdata1==$email && $dbdata_pass!=$password) || $dbexist_email==0 ){
+     else if(($dbdata_email==$email && $dbdata_pass!=$password) || $dbexist_email==0 ){
         $_SESSION["error"] = -1;
         header("Location: login.php?email=$email");
     }
