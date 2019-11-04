@@ -30,7 +30,7 @@ $smarty->compile_dir = 'templates_c';
         $smarty->assign('MESSAGE', $Erro);
     }
     elseif($error==-1){
-        $Erro='Username Incorreto ou Password Incorreta';
+        $Erro='Wrong email or password';
         $smarty->assign('MESSAGE', $Erro);
         $smarty->assign('email', $email);
         session_destroy();

@@ -54,10 +54,12 @@
         </div>
     </div>
 </nav>
- <!--BEGIN MESSAGE -->
-    <h6 style="text-align:center">{$MESSAGE}</h6>
-        <br />
-        <br />
+ {if $MESSAGE neq "Sucesso" }
+    <div class="alert alert-danger">
+        <p style="text-align: center">{$MESSAGE}</p>
+    </div>
+    {/if}
+    </div>
 <form method="POST" action="login_action.php">
 <div class="container text-center">
     <div class="row content">
