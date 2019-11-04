@@ -32,7 +32,7 @@ $smarty->assign("href2","register.php");
 $smarty->assign("href3","login.php");
 
 $name=$_SESSION['name'];
-if (isset($name)) {
+if (isset($_SESSION['name'])) {
 	$smarty->assign("MENU_2","Welcome ".$name);
 	$smarty->assign("MENU_3","Logout");
 	$smarty->assign("MENU_4","Post Blog");
