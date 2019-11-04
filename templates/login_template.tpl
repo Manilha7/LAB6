@@ -55,7 +55,7 @@
     </div>
 </nav>
 <div>
- {if $MESSAGE neq 0 }
+ {if isset($MESSAGE) }
     <div class="alert alert-danger">
         <p style="text-align: center">{$MESSAGE}</p>
     </div>

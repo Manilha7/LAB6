@@ -22,11 +22,7 @@ $smarty->compile_dir = 'templates_c';
         $error=$_SESSION['error'];
     else $error =0;
     //Sucesso
-    if($error==0){
-        $Erro= 0;
-        $smarty->assign('MESSAGE', $Erro);
-    }
-    elseif($error==-1){
+    if($error==-1){
         $Erro='Wrong email or password';
         $smarty->assign('MESSAGE', $Erro);
         session_destroy();
