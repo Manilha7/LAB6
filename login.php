@@ -12,10 +12,11 @@ $smarty->compile_dir = 'templates_c';
  
     
     $smarty->assign("MENU_1","Home");
-    $smarty->assign("MENU_2",$name);
-    $smarty->assign("MENU_3","Logout");
+    $smarty->assign("MENU_2","Register");
+    $smarty->assign("MENU_3","Login");
     $smarty->assign("href1","index.php");
-    $smarty->assign("href3","logout.php");
+    $smarty->assign("href2","register.php");
+    $smarty->assign("href3","login.php");
     $smarty->display('login_template.tpl');
 
     $error = $_SESSION["error"];
