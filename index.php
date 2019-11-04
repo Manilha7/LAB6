@@ -26,6 +26,9 @@ $smarty->assign('baseLab4',$tuple);
 $smarty->assign("MENU_1","Home");
 $smarty->assign("MENU_2","Register");
 $smarty->assign("MENU_3","Login");
+$smarty->assign("href1","index.php");
+$smarty->assign("href2","register.php");
+$smarty->assign("href3","login.php");
 $smarty->display('index_template.tpl');
 
 
