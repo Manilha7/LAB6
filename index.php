@@ -32,7 +32,7 @@ $smarty->assign("href2","register.php");
 $smarty->assign("href3","login.php");
 
 
-if ($MESSAGE eq "Sucesso") {
+if (empty($MESSAGE)==false) {
 	$smarty->assign("MENU_2","Welcome".$nome);
 	$smarty->assign("MENU_3","Logout");
 	$smarty->assign("href2","");
