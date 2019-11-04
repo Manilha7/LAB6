@@ -117,7 +117,9 @@
             <div class="text-right">
                 <h4><small><i> Data de criação:  {$base.created_at}</i></small></h4>
          </div>
-         <button style="float: bottom" type="submit" class="btn btn-warning">Update</button>
+         {if $base.user_id eq $userId}
+         <a href="blog.php?micropost_id=$base.id" role="button" class="btn btn-warning">Update</a>
+         {/if}
    	</div>
 </div>
 

@@ -12,12 +12,12 @@ $smarty->compile_dir = 'templates_c';
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 
 
-// criar query numa string
-$query  = "SELECT name,microposts.created_at,microposts.updated_at, content FROM users INNER JOIN microposts ON users.id = microposts.user_id ORDER BY microposts.updated_at DESC;";
-// executar a query
+
+$query  = "SELECT name,microposts.created_at,microposts.updated_at,microposts.user_id content FROM users INNER JOIN microposts ON users.id = microposts.user_id ORDER BY microposts.updated_at DESC;";
+
 if(!($result = @ mysql_query($query,$db)))
     die("Erro " . mysql_errno() . " : " . mysql_error());
-// vai buscar o resultado da query
+
 $nrows  = mysql_num_rows($result);
 for($i=0; $i<$nrows; $i++)
     $tuple[$i] = mysql_fetch_array($result,MYSQL_ASSOC);
@@ -36,9 +36,12 @@ if (isset($_SESSION['name'])) {
 	$smarty->assign("MENU_2","Welcome ".$name);
 	$smarty->assign("MENU_3","Logout");
 	$smarty->assign("href2","blog.php");
+	$smarty->assign("userId",$_SESSION['id']);
 	$smarty->assign("href3","logout_action.php");
 
 }
+
+
 
 
 $smarty->display('index_template.tpl');
