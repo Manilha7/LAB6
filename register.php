@@ -39,8 +39,7 @@ if(isset($_GET['Error']))
 else $MessageError = -1;
 
 
-	//print_r($MessageError);
-	//$smarty->assign("Error",$_GET['Error']);
+	
 	$smarty->assign("username",$username);
 	$smarty->assign("email",$email);
 	$smarty->assign("MessageError",$MessageError);
