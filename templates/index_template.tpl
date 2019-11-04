@@ -36,7 +36,7 @@
     </style>
 </head>
 <body>
- {if $MESSAGE eq "Sucesso" }   
+ {if $MESSAGE eq "Sucesso" || $MESSAGE eq NULL }   
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
