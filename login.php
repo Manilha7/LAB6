@@ -23,6 +23,8 @@ $smarty->compile_dir = 'templates_c';
     $name = $_SESSION["name"];
     $email = $_GET["email"];
 
+
+    $smarty->setCurrentBlock("MESSAGE");
     //Sucesso
     if($error==0){
         $Erro='Sucesso';
@@ -36,5 +38,6 @@ $smarty->compile_dir = 'templates_c';
         session_destroy();
     }    
 
+    $smarty->parseCurrentBlock();
     
 ?>
