@@ -13,7 +13,7 @@ $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 
 
 
-$query  = "SELECT name,microposts.created_at,microposts.updated_at,microposts.user_id content FROM users INNER JOIN microposts ON users.id = microposts.user_id ORDER BY microposts.updated_at DESC;";
+$query  = "SELECT name,microposts.created_at,microposts.updated_at,microposts.user_id,content FROM users INNER JOIN microposts ON users.id = microposts.user_id ORDER BY microposts.updated_at DESC;";
 
 if(!($result = @ mysql_query($query,$db)))
     die("Erro " . mysql_errno() . " : " . mysql_error());
