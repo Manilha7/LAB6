@@ -55,7 +55,7 @@
     </div>
 </nav>
 <div>
- {if $MESSAGE neq 'Sucesso' }
+ {if $MESSAGE neq 0 }
     <div class="alert alert-danger">
         <p style="text-align: center">{$MESSAGE}</p>
     </div>

@@ -26,7 +26,7 @@ $smarty->compile_dir = 'templates_c';
 
     //Sucesso
     if($error==0){
-        $Erro='Sucesso';
+        $Erro= 0;
         $smarty->assign('MESSAGE', $Erro);
     }
     elseif($error==-1){
