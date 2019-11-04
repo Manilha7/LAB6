@@ -17,11 +17,6 @@ $smarty->compile_dir = 'templates_c';
     $smarty->assign("href1","index.php");
     $smarty->assign("href2","register.php");
     $smarty->assign("href3","login.php");
-
-
-    $error = $_SESSION["error"];
-    $name = $_SESSION["name"];
-    $email = $_GET["email"];
   
     print_r($_SESSION);
     //Sucesso
@@ -32,7 +27,6 @@ $smarty->compile_dir = 'templates_c';
     elseif($error==-1){
         $Erro='Wrong email or password';
         $smarty->assign('MESSAGE', $Erro);
-        $smarty->assign('email', $email);
         session_destroy();
     }
 
