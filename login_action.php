@@ -16,34 +16,34 @@ include 'db.php';
     $error = -1;
     
           
-    $sql = "SELECT * FROM users WHERE email='$email'";
-    $sql1 = "SELECT email FROM users WHERE email='$email'";
-    $sql2 = "SELECT password_digest FROM users WHERE email='$email'";
+    $sql = "SELECT * FROM users WHERE email='$email' AND password_digest='$password'";
+    $sql_email = "SELECT email FROM users WHERE email='$email'";
+    $sql_pass = "SELECT password_digest FROM users WHERE email='$email'";
    
 
-     mysql_query($sql,$db);
+    mysql_query($sql,$db);
     $result = mysql_query($sql,$db);
     $dbdata = mysql_fetch_array($result);
     $dbexist = mysql_num_rows($result);
     
-    $result1 = mysql_query($sql1,$db);
-    $dbdata1 = mysql_fetch_array($result1);
-    $dbexist1 = mysql_num_rows($result1);
+    $result_email = mysql_query($sql_email,$db);
+    $dbdata_email = mysql_fetch_array($result_email);
+    $dbexist_email = mysql_num_rows($result_email);
     
-    $result2 = mysql_query($sql2,$db);
-    $dbdata2 = mysql_fetch_array($result2);
-    $dbexist2 = mysql_num_rows($result2);
+    $result_pass = mysql_query($sql_pass,$db);
+    $dbdata_pass = mysql_fetch_array($result_pass);
+    
 
 
     //sucesso
-    if($dbdata['email']==$email && $dbdata['password_digest']==$password){
+    if($dbdata==$email && $dbdata==$password){
         $_SESSION["id"] = $dbdata['id'];
         $_SESSION["name"] = $dbdata['name'];
         $_SESSION["error"] = 0;
         header("Location: index.php");
     }
     // insucesso
-     else if(($dbdata1['email']==$email && $dbdata2['password_digest']!=$password) || $dbexist1==0 ){
+     else if(($dbdata1==$email && $dbdata_pass!=$password) || $dbexist_email==0 ){
         $_SESSION["error"] = -1;
         header("Location: login.php?email=$email");
     }
