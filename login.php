@@ -38,6 +38,5 @@ $smarty->compile_dir = 'templates_c';
     }
 
 
-    $smarty->parseCurrentBlock();
     
 ?>
