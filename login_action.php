@@ -22,10 +22,8 @@ include 'db.php';
 
 
     $result=mysql_query($sql,$db);
+    $dbdata = mysql_fetch_array($result);
     
-    if(!($result = @ mysql_query($sql,$db)))
-        die("Erro " . mysql_errno() . " : " . mysql_error());
-
     $nrows  = mysql_num_rows($result);
     if ($nrows>0) {
         $_SESSION["error"] = -1;

@@ -15,21 +15,7 @@ $error = $_SESSION["error"];
 $name = $_SESSION["name"];
 $email = $_GET["email"];
 
-    //Sucesso
-    if($error==-1){
-        $Erro='Sucesso';
-        $smarty->display('message_template.html');
-        $smarty->assign('MESSAGE', $Erro);
-        $smarty->parseCurrentBlock();
-    }
-    //Insucesso
-    else if($error==1){
-        $Erro='Password Incorreta';
-        $smarty->assign('MESSAGE', $Erro);
-        $smarty->assign('EMAIL', $email);
-        session_destroy();
-    }
-    
+
 
     
     $smarty->assign("MENU_1","Home");
