@@ -3,7 +3,12 @@
 
 
 include 'db.php';
+    
+    require_once('/usr/share/php/smarty/libs/Smarty.class.php');
+    $smarty = new Smarty();
 
+    $smarty->template_dir = 'templates';
+    $smarty->compile_dir = 'templates_c';
 
     // Process signup submission
     $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
