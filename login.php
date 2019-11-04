@@ -22,12 +22,6 @@ if($db) {
     $smarty->assign("href3","login.php");
     $smarty->display('login_template.tpl');
 
-
-    $smarty->setCurrentBlock("MESSAGE");
-    
-    
-    $smarty->assign('EMAIL', "");
-
     $error = $_SESSION["error"];
     $name = $_SESSION["name"];
     $email = $_GET["email"];
@@ -44,7 +38,6 @@ if($db) {
         $smarty->assign('email', $email);
         session_destroy();
     }    
-    $smarty->parseCurrentBlock();
 
     // fechar a ligação à base de dados
     mysql_close($db);
