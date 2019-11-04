@@ -36,7 +36,7 @@
     </style>
 </head>
 <body>
-
+ {if $MESSAGE eq 0 }   
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -49,12 +49,13 @@
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{$href2}">{$MENU_2}</a></li>
+                <li><a href="{$href2}"> "Welcome" {$MENU_2}</a></li>
                 <li><a href="{$href3}">{$MENU_3}</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
