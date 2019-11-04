@@ -15,10 +15,9 @@ include 'db.php';
     $error = -1;
     
           
-    $sql = "SELECT name, email, password_digest, id FROM users WHERE email='$email' AND password_digest='$password'";
+    $sql = "SELECT * FROM users WHERE email='$email' AND password_digest='$password'";
    
 
-    mysql_query($sql,$db);
     $result = mysql_query($sql,$db);
     $dbexist = mysql_num_rows($result);
     $dbdata = mysql_fetch_array($result,MYSQL_ASSOC);
