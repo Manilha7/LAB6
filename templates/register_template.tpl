@@ -86,8 +86,8 @@
                 </div>
                 <br>
                 <hr>
-                <button style="float: bottom" type="submit" class="btn btn-success">Register</button>
-
+                <button style="float: bottom" type="submit" class="btn btn-success">Submit</button>
+                <button style="float: bottom" type="reset" class="btn btn-danger">Reset</button>
             </div>
             <div class="col-sm-2 sidenav">
             </div>
