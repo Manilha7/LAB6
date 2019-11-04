@@ -54,13 +54,6 @@
         </div>
     </div>
 </nav>
-<div>
-    {if $MessageError neq -1 }
-    <div class="alert alert-danger">
-        <p style="text-align: center">{$MessageError}</p>
-    </div>
-    {/if}
-    </div>
 <form method="POST" action="login_action.php">
 <div class="container text-center">
     <div class="row content">
