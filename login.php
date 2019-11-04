@@ -33,6 +33,7 @@ $smarty->compile_dir = 'templates_c';
         $Erro='Wrong email or password';
         $smarty->assign('MESSAGE', $Erro);
         $smarty->assign('email', $email);
+        $smarty->display('login_template.tpl');
         session_destroy();
     }
 

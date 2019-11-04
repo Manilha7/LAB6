@@ -59,7 +59,6 @@
         <p style="text-align: center">{$MESSAGE}</p>
     </div>
     {/if}
-    </div>
 <form method="POST" action="login_action.php">
 <div class="container text-center">
     <div class="row content">
